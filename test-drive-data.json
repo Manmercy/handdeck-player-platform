@@ -1,0 +1,248 @@
+{
+  "handdeck-player-profiles-v2": [
+    {
+      "id": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "name": "Aria · Hand Deck Test",
+      "mascot": "hello",
+      "games": [
+        "lorcana"
+      ],
+      "background": "aurora",
+      "backgroundImage": "",
+      "createdAt": "2026-11-02T08:37:59.211Z",
+      "provider": "local",
+      "following": [
+        "d9a0a65c-bd0a-483f-ac21-d1343415655f"
+      ],
+      "badges": [
+        {
+          "id": "handdeck-welcome",
+          "earnedAt": "2026-11-02T08:37:59.211Z"
+        },
+        {
+          "id": "first-match",
+          "earnedAt": "2026-11-02T08:37:59.251Z"
+        },
+        {
+          "id": "same-rival-2",
+          "earnedAt": "2026-11-02T08:37:59.286Z"
+        }
+      ]
+    },
+    {
+      "id": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "name": "Ken · Hand Deck Test",
+      "mascot": "win",
+      "games": [
+        "lorcana"
+      ],
+      "background": "aurora",
+      "backgroundImage": "",
+      "createdAt": "2026-11-02T08:37:59.211Z",
+      "provider": "local",
+      "following": [
+        "e0758754-4bb1-4a5c-89b5-af046d65bcdd"
+      ],
+      "badges": [
+        {
+          "id": "handdeck-welcome",
+          "earnedAt": "2026-11-02T08:37:59.211Z"
+        },
+        {
+          "id": "first-match",
+          "earnedAt": "2026-11-02T08:37:59.275Z"
+        }
+      ]
+    }
+  ],
+  "handdeck-lorcana-saved-decks-v1": [
+    {
+      "id": "3210ebfa-5caa-4cb7-904d-d21447f95f9c",
+      "ownerId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "visibility": "public",
+      "date": "2026-11-02T08:37:59.211Z",
+      "deck": {
+        "name": "Aria Aurora Practice",
+        "cards": {
+          "014/634c1630e55e4aeb17427e37bd79d4ad3aa20567": 4,
+          "014/29da2d88eafef689cd25f124b31e3f96a195eaf0": 4,
+          "014/3efdd64a9500449e27e9147f96aed77d929df76a": 4,
+          "014/a42384d0ff4e6391f99d1cbf15d343d176bc514a": 4,
+          "014/b120ccdf21e8fcb5b05c54cc57f7c49f62cdcbd6": 4,
+          "014/cd5c465d47ee5de2790740f152e9409b0f5614f6": 4,
+          "014/34f856b35ad0fe9eb8e10adef49e93e9afde4ea7": 4,
+          "014/a1c97ad4c29f7228c64d18d0731b59e5b7c8beb9": 4,
+          "014/63aa1f4e7639e0a833d57a58e02019cbb8935e71": 4,
+          "014/726479fc9a4226f7e6d423293ae9cac13800971a": 4,
+          "014/116c903adf8e1753c2fd54d1f8fd24704f045fd7": 4,
+          "014/964da2dea7bc1470d511b183b19c65e84b6fb35f": 4,
+          "014/c68a5f25ad15a2acc398d67da7616913df0b2459": 4,
+          "014/f1c626f5db45741e5e050c63da422a91292e94fd": 4,
+          "014/8d9691fe66d3bd0feef5ac00367c7499d30d0ede": 4
+        },
+        "settings": {
+          "mode": "constructed",
+          "inks": [
+            "amethyst",
+            "steel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "126d4f26-c816-4e8d-9292-9bf4ed875f93",
+      "ownerId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "visibility": "public",
+      "date": "2026-11-02T08:37:59.211Z",
+      "deck": {
+        "name": "Ken Storybook Practice",
+        "cards": {
+          "014/0426f215a4f0622a45ce5490ef7d14195ba37e30": 4,
+          "014/195a79dd8c700219284c5237d5a09a702ff613a6": 4,
+          "014/3bb7c940db8ce683fbf94ce838aae20fb71987b6": 4,
+          "014/5ff0ef0f1adfb4a20216b218b2c6e0129101eba1": 4,
+          "014/2d153517b5e06fddb5b00ad0d5ccd7359d5aa660": 4,
+          "014/636c1af4f42aa085f19e9d9bc704c3922fdf64c5": 4,
+          "014/5c2b583cc2279c3fbe1f9ffe11c94869efb323f1": 4,
+          "014/ccd210f0fd11ca324091f92840d2bc6b9994e6bb": 4,
+          "014/9fa75ad77dada3ce4ff91fa0851432953c714ede": 4,
+          "014/ff843cb110ed041e1bf06b37c44e0ee739f79e8c": 4,
+          "014/6d6619f956c31b94fba94f1878da95df4bf9604a": 4,
+          "014/64d37d7375c2bc83b75e8285d4b4305461f3c4f2": 4,
+          "014/3e415a2ca2f0f4e802f046501a5517b557cd2114": 4,
+          "014/39f8589287eaa9405809c366463b787374a25fe2": 4,
+          "014/1e888f77ff18c21c18a3278b47b77bc69046ec04": 4
+        },
+        "settings": {
+          "mode": "constructed",
+          "inks": [
+            "amber",
+            "sapphire"
+          ]
+        }
+      }
+    }
+  ],
+  "handdeck-player-posts-v1": [
+    {
+      "id": "50b9ae55-86af-40eb-8224-d7e4e4662deb",
+      "ownerId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "type": "moment",
+      "caption": "Aria: first table night with my new deck.",
+      "image": "",
+      "createdAt": "2026-11-02T08:37:59.250Z",
+      "likes": [
+        "d9a0a65c-bd0a-483f-ac21-d1343415655f"
+      ],
+      "comments": [
+        {
+          "id": "2becff52-0c6b-4013-a86b-02da77207a81",
+          "authorId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+          "text": "Ken: great opening game!",
+          "createdAt": "2026-11-02T08:37:59.264Z"
+        }
+      ],
+      "badges": []
+    },
+    {
+      "id": "4d85c753-ae5e-48de-88ad-78aafd97dc1a",
+      "ownerId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "type": "match",
+      "caption": "Aria vs Ken · round one",
+      "image": "",
+      "createdAt": "2026-11-02T08:37:59.251Z",
+      "likes": [],
+      "comments": [],
+      "badges": [
+        "first-match"
+      ],
+      "match": {
+        "postId": "4d85c753-ae5e-48de-88ad-78aafd97dc1a",
+        "ownerId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+        "game": "lorcana",
+        "result": "win",
+        "myScore": 20,
+        "opponentScore": 17,
+        "opponentId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+        "opponentName": "Ken · Hand Deck Test",
+        "verification": "verified",
+        "createdAt": "2026-11-02T08:37:59.251Z",
+        "verifiedAt": "2026-11-02T08:37:59.275Z"
+      }
+    },
+    {
+      "id": "d2c0dc29-7cd1-4d82-b640-0a45951097c2",
+      "ownerId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "type": "moment",
+      "caption": "Ken: testing a new Storybook list tonight.",
+      "image": "",
+      "createdAt": "2026-11-02T08:37:59.265Z",
+      "likes": [
+        "e0758754-4bb1-4a5c-89b5-af046d65bcdd"
+      ],
+      "comments": [
+        {
+          "id": "f372b5b4-9781-4e0f-95d3-ccfd572ba411",
+          "authorId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+          "text": "Aria: ready for a rematch!",
+          "createdAt": "2026-11-02T08:37:59.281Z"
+        }
+      ],
+      "badges": []
+    },
+    {
+      "id": "421e5771-d567-4adf-aff8-17a0fde4923c",
+      "ownerId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "type": "match",
+      "caption": "Ken vs Aria · round two",
+      "image": "",
+      "createdAt": "2026-11-02T08:37:59.276Z",
+      "likes": [],
+      "comments": [],
+      "badges": [
+        "first-match"
+      ],
+      "match": {
+        "postId": "421e5771-d567-4adf-aff8-17a0fde4923c",
+        "ownerId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+        "game": "lorcana",
+        "result": "loss",
+        "myScore": 15,
+        "opponentScore": 18,
+        "opponentId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+        "opponentName": "Aria · Hand Deck Test",
+        "verification": "verified",
+        "createdAt": "2026-11-02T08:37:59.276Z",
+        "verifiedAt": "2026-11-02T08:37:59.286Z"
+      }
+    }
+  ],
+  "handdeck-player-matches-v1": [
+    {
+      "postId": "4d85c753-ae5e-48de-88ad-78aafd97dc1a",
+      "ownerId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "game": "lorcana",
+      "result": "win",
+      "myScore": 20,
+      "opponentScore": 17,
+      "opponentId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "opponentName": "Ken · Hand Deck Test",
+      "verification": "verified",
+      "createdAt": "2026-11-02T08:37:59.251Z",
+      "verifiedAt": "2026-11-02T08:37:59.275Z"
+    },
+    {
+      "postId": "421e5771-d567-4adf-aff8-17a0fde4923c",
+      "ownerId": "d9a0a65c-bd0a-483f-ac21-d1343415655f",
+      "game": "lorcana",
+      "result": "loss",
+      "myScore": 15,
+      "opponentScore": 18,
+      "opponentId": "e0758754-4bb1-4a5c-89b5-af046d65bcdd",
+      "opponentName": "Aria · Hand Deck Test",
+      "verification": "verified",
+      "createdAt": "2026-11-02T08:37:59.276Z",
+      "verifiedAt": "2026-11-02T08:37:59.286Z"
+    }
+  ]
+}

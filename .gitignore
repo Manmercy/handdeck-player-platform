@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+
+# Local review artifacts and launch helpers are not part of the public site.
+brand/
+PRODUCT_AUDIT_*.md
+FEATURE_READINESS_AUDIT_*.md
+Handdeck-Player-Platform/AUDIT.md
+Handdeck-Player-Platform/Start.command
+Handdeck-Player-Platform/previews/
+Handdeck-Player-Platform/tools/

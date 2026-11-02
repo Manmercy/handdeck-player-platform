@@ -1,0 +1,32 @@
+@media(max-width:740px){
+ .my-decks-page .page-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 20px}
+ .my-decks-page .page-heading h1{font-size:clamp(27px,8vw,34px);margin:0}
+ .my-decks-page .page-heading>button{flex:none;min-height:44px;margin:0;padding:9px 12px;gap:7px;font-size:12px}
+ .my-decks-page .page-heading>button .icon{width:18px;height:18px}
+ .my-decks-page .deck-grid{gap:16px}
+ .my-decks-page .deck-tile{border-radius:20px;box-shadow:0 8px 25px #10142c13}
+ .my-decks-page .deck-tile-art.deck-themed-cover{height:148px;padding:20px}
+ .my-decks-page .deck-tile-art .deck-cover-game{font-size:clamp(29px,8vw,36px)}
+ .my-decks-page .deck-tile-body{padding:17px 18px 18px}
+ .my-decks-page .deck-tile-body small{font-size:9px;letter-spacing:.08em}
+ .my-decks-page .deck-tile-body h2{font-size:22px;line-height:1.22;margin:8px 0 5px}
+ .my-decks-page .deck-tile-body p{font-size:12px;margin:0 0 16px}
+ .my-decks-page .deck-actions>.secondary,.my-decks-page .deck-settings-menu>summary{min-height:46px}
+ .deck-preview-page>.back-link{margin-bottom:12px}
+ .deck-preview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 13px}
+ .deck-preview-card-caption strong{font-size:11px}
+ .deck-preview-card-caption span{font-size:10px}
+ .deck-preview-quantity{min-width:32px;height:32px;font-size:15px}
+ .deck-appearance-controls .deck-appearance-picker{display:grid;grid-template-columns:repeat(6,minmax(0,42px));justify-content:space-between;gap:10px;width:100%;margin:0 0 8px}
+ .deck-appearance-picker>span{grid-column:1/-1}
+ .deck-appearance-picker button{width:40px;height:40px}
+}
+@media(max-width:350px){
+ .my-decks-page .page-heading{gap:8px}
+ .my-decks-page .page-heading h1{font-size:27px}
+ .my-decks-page .page-heading>button{font-size:11px;padding:8px 10px}
+ .my-decks-page .deck-tile-art .deck-cover-game{font-size:29px;left:18px;bottom:16px}
+ .deck-preview-grid{gap:18px 9px}
+ .deck-appearance-controls .deck-appearance-picker{gap:5px}
+ .deck-appearance-picker button{width:38px;height:38px}
+}

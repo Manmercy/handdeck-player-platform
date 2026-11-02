@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ทดลอง 2 โปรไฟล์ · Hand Deck</title>
+<link rel="icon" href="Handdeck-Player-Platform/assets/handdeck-app-icon.svg">
+<script src="Handdeck-Player-Platform/storage-migrate.js"></script>
+<style>
+  :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111746;background:#f7f7fc}
+  *{box-sizing:border-box}body{margin:0;min-height:100dvh;display:grid;place-items:center;padding:24px}
+  main{width:min(100%,560px);background:#fff;border:1px solid #dce5f3;border-radius:26px;padding:clamp(26px,5vw,44px);box-shadow:0 20px 60px #28468a14}
+  img{width:190px;height:auto;display:block;margin-bottom:38px}h1{font-size:clamp(28px,5vw,40px);letter-spacing:-.045em;line-height:1.16;margin:0 0 15px}
+  p{line-height:1.7;color:#52617f;margin:0 0 20px}.details{background:#edf4ff;border-radius:16px;padding:18px;margin:24px 0;color:#111746;font-size:14px;line-height:1.8}
+  button{min-height:50px;border:0;border-radius:12px;padding:12px 20px;background:linear-gradient(110deg,#087bd5,#6f55ea 53%,#db55cb);color:#fff;font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;width:100%}
+  button:disabled{opacity:.6;cursor:wait}a{display:inline-block;margin-top:22px;color:#7759df;font-size:14px;font-weight:700;text-decoration:none}
+  #status{min-height:24px;margin-top:14px;font-size:13px;color:#52617f}
+</style>
+</head>
+<body>
+<main>
+  <img src="Handdeck-Player-Platform/assets/handdeck-logo-horizontal.svg" alt="Hand Deck">
+  <h1>ลองใช้งานด้วย 2 โปรไฟล์</h1>
+  <p>เพิ่ม Aria และ Ken พร้อม Deck, Post, Match ที่ยืนยันแล้ว, Follow, Like และ Comment เพื่อดูการทำงานร่วมกันในเว็บจริง</p>
+  <div class="details">ข้อมูลชุดนี้จะเพิ่มในเบราว์เซอร์นี้เท่านั้น ไม่แสดงให้ผู้ใช้คนอื่นเห็น และไม่ลบโปรไฟล์ที่คุณมีอยู่ คุณสลับหรือกลับไปใช้โปรไฟล์เดิมได้จากเมนูบัญชี</div>
+  <button id="load-demo" type="button">เปิดโปรไฟล์ทดสอบ</button>
+  <p id="status" role="status"></p>
+  <a href="Handdeck-Player-Platform/index.html#welcome">กลับหน้าแรก</a>
+</main>
+<script>
+document.getElementById('load-demo').addEventListener('click', async () => {
+  const button=document.getElementById('load-demo'),status=document.getElementById('status');
+  button.disabled=true;status.textContent='กำลังเตรียมข้อมูลทดสอบ…';
+  try {
+    const response=await fetch('test-drive-data.json');
+    if(!response.ok)throw Error('โหลดชุดทดสอบไม่สำเร็จ');
+    const demo=await response.json();
+    const keys=['handdeck-player-profiles-v2','handdeck-lorcana-saved-decks-v1','handdeck-player-posts-v1','handdeck-player-matches-v1'];
+    for(const key of keys){
+      const existing=JSON.parse(localStorage.getItem(key)||'[]');
+      const additions=demo[key];
+      if(!Array.isArray(existing)||!Array.isArray(additions))throw Error('ข้อมูลในเบราว์เซอร์ไม่ถูกต้อง');
+      const merged=new Map(existing.map(item=>[item.id||item.postId,item]));
+      for(const item of additions)if(!merged.has(item.id||item.postId))merged.set(item.id||item.postId,item);
+      localStorage.setItem(key,JSON.stringify([...merged.values()]));
+    }
+    const first=demo['handdeck-player-profiles-v2'][0];
+    localStorage.setItem('handdeck-player-preview-v1',JSON.stringify(first));
+    localStorage.setItem('handdeck-local-session-v1',JSON.stringify({userId:first.id,active:true}));
+    location.href='Handdeck-Player-Platform/index.html#feed';
+  } catch(error){status.textContent=error.message||'เปิดข้อมูลทดสอบไม่สำเร็จ';button.disabled=false;}
+});
+</script>
+</body>
+</html>

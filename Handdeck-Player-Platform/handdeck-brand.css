@@ -1,0 +1,18 @@
+/* Hand Deck V.0.1: visual tokens derived from the concept board, without changing layout or data. */
+:root{--bg:#f7f7fc;--soft:#edf4ff;--line:#dce5f3;--text:#111746;--muted:#52617f;--purple:#7759df;--primary-soft:#e8f1ff;--accent:#55c9f5;--shadow:0 14px 38px #28468a12}
+html[data-theme=dark]{--bg:#121634;--panel:#19214a;--soft:#202c5c;--line:#394873;--text:#f8faff;--muted:#bac7e3;--purple:#bd8fff;--primary-soft:#263b70;--accent:#46c6f6;--shadow:0 14px 40px #0003}
+body{background:var(--bg)}
+.primary{background:linear-gradient(110deg,#087bd5 0%,#6f55ea 53%,#db55cb 100%);color:#fff;box-shadow:0 9px 22px #655dd52f}
+.primary:hover{filter:brightness(1.05)}
+.bottom-nav .new-nav,.bottom-nav .new-nav.active{background:linear-gradient(135deg,#2abcf1,#a35bec);color:#fff;box-shadow:0 5px 16px #478de547}
+.landing-art{background:radial-gradient(circle at 55% 30%,#f7deff 0%,#b6d9ff 41%,#4754b4 100%)}
+.hero-mascot{border:0;box-shadow:0 24px 65px #383aa554;background:radial-gradient(circle at 50% 50%,#ffffff85,transparent 68%)}
+.hero-mascot img{object-fit:contain}
+.landing-copy em,.studio-entry-heading em{background:linear-gradient(105deg,#248fe8,#af4ce1,#ec63af);background-clip:text;-webkit-background-clip:text;color:transparent}
+.welcome-badge-art{background:linear-gradient(130deg,#20296c,#7155d7 53%,#db5bc4)}
+.brand img{width:145px}
+@media(max-width:740px){.brand img{width:116px}.hero-mascot{background:transparent}}
+
+/* Wider wordmark, with the same header behavior on small screens. */
+.topbar .brand img{width:190px;max-width:100%;height:44px}
+@media(max-width:740px){.topbar .brand img{width:136px;height:40px}}

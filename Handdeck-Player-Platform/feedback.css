@@ -1,0 +1,19 @@
+.handdeck-dialog{width:min(440px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--line);border-radius:26px;background:var(--panel);color:var(--text);box-shadow:0 30px 90px #11133255;overflow:auto}
+.handdeck-dialog::backdrop{background:#111632aa;backdrop-filter:blur(7px)}
+.handdeck-dialog form{padding:30px}
+.handdeck-dialog-mark{width:45px;height:45px;display:grid;place-items:center;border-radius:15px;background:var(--primary-soft);color:var(--purple);font-size:27px;margin-bottom:22px}
+.handdeck-dialog-kicker{color:var(--purple);font-size:10px;font-weight:850;letter-spacing:.16em;margin-bottom:10px}
+.handdeck-dialog h2{font-size:clamp(26px,5vw,32px);line-height:1.15;margin:0 0 12px}
+.handdeck-dialog #handdeck-dialog-message{color:var(--muted);font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.handdeck-dialog-field{display:grid;gap:8px;margin-top:22px;font-size:12px;font-weight:800}
+.handdeck-dialog-field[hidden]{display:none}
+.handdeck-dialog-field input{width:100%;min-height:50px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);padding:12px 14px}
+.handdeck-dialog-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:27px}
+.handdeck-dialog-actions button{flex:1;min-width:0}
+.handdeck-dialog-danger #handdeck-dialog-confirm{background:#b52b57;color:#fff}
+.handdeck-dialog-danger #handdeck-dialog-confirm:hover{background:#982043}
+.toast{display:flex!important;align-items:center;gap:11px;bottom:calc(24px + env(safe-area-inset-bottom));max-width:min(440px,calc(100vw - 28px));width:max-content;min-height:52px;padding:12px 16px;background:#252050;color:#fff;border:1px solid #ffffff29;border-radius:15px;box-shadow:0 18px 45px #11163248;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,12px);transition:opacity .22s,transform .22s,visibility .22s;line-height:1.45;font-weight:650;z-index:30}
+.toast::before{content:'✦';width:27px;height:27px;flex:none;display:grid;place-items:center;border-radius:9px;background:#d9fb76;color:#252050;font-size:17px}
+.toast.visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:740px){.handdeck-dialog form{padding:24px}.handdeck-dialog-actions{flex-direction:column-reverse}.handdeck-dialog-actions button{width:100%;flex:auto}.toast{bottom:calc(88px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}

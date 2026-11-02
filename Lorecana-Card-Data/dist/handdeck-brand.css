@@ -1,0 +1,8 @@
+/* Hand Deck accent layer; the Lorcana Studio layout remains unchanged. */
+:root{--purple:#815fe4;--accent:#3bbdf3;--primary-soft:#e7f4ff}
+html[data-theme=dark]{--purple:#c29bff;--accent:#4ac8fb;--primary-soft:#24365f}
+.brand img{width:190px;height:46px;object-fit:contain}
+.primary-button{background:linear-gradient(105deg,#178bde,#7958e9 60%,#c65ed6);color:#fff}
+.heading-dot{color:#e867c4}
+.topbar nav a.active{color:#ba8fff;border-color:#9b72ef}
+@media(max-width:600px){.brand img{width:132px;height:38px}}
