@@ -167,7 +167,8 @@
         "opponentName": "Ken · Hand Deck Test",
         "verification": "verified",
         "createdAt": "2026-11-02T08:37:59.251Z",
-        "verifiedAt": "2026-11-02T08:37:59.275Z"
+        "verifiedAt": "2026-11-02T08:37:59.275Z",
+        "deckId": "3210ebfa-5caa-4cb7-904d-d21447f95f9c"
       }
     },
     {
@@ -213,7 +214,8 @@
         "opponentName": "Aria · Hand Deck Test",
         "verification": "verified",
         "createdAt": "2026-11-02T08:37:59.276Z",
-        "verifiedAt": "2026-11-02T08:37:59.286Z"
+        "verifiedAt": "2026-11-02T08:37:59.286Z",
+        "deckId": "126d4f26-c816-4e8d-9292-9bf4ed875f93"
       }
     }
   ],
@@ -229,7 +231,8 @@
       "opponentName": "Ken · Hand Deck Test",
       "verification": "verified",
       "createdAt": "2026-11-02T08:37:59.251Z",
-      "verifiedAt": "2026-11-02T08:37:59.275Z"
+      "verifiedAt": "2026-11-02T08:37:59.275Z",
+      "deckId": "3210ebfa-5caa-4cb7-904d-d21447f95f9c"
     },
     {
       "postId": "421e5771-d567-4adf-aff8-17a0fde4923c",
@@ -242,7 +245,8 @@
       "opponentName": "Aria · Hand Deck Test",
       "verification": "verified",
       "createdAt": "2026-11-02T08:37:59.276Z",
-      "verifiedAt": "2026-11-02T08:37:59.286Z"
+      "verifiedAt": "2026-11-02T08:37:59.286Z",
+      "deckId": "126d4f26-c816-4e8d-9292-9bf4ed875f93"
     }
   ]
 }

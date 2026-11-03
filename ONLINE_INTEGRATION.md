@@ -13,12 +13,19 @@ The current build remains a browser-local prototype. These are the server behavi
 - `visibility` is `private` by default and can become `public` only through its owner. Existing decks without the field remain private.
 - Public profile responses include only public deck summaries; a public deck detail endpoint returns its card list and appearance to other players. Private deck detail and all edit/delete operations require owner authorization.
 - Keep a stable deck ID when Studio saves an existing deck. Apply visibility and appearance to that ID, including after a rename or edit.
+- A Match may reference an owned `deckId`. Resolve that ID through the same deck permission check as Deck Preview: the owner sees their Private deck, while other players receive no private name, cover, cards, or link. A deleted deck leaves the Match record intact with an unavailable-deck label.
 
 ## Follows and posts
 
 - `PUT /api/players/{playerId}/follow` and `DELETE /api/players/{playerId}/follow` are idempotent authenticated actions. Reject self-follow and non-existent targets; return current `following` state and counts. Search must query server profiles, not localStorage.
 - `GET /api/feed` returns the user's own posts plus authorized followed players' posts. `GET /api/posts/{postId}` and media URLs enforce the same rule. Decide whether Follow is immediate or requires approval before promising private followers-only posts.
 - Likes and comments need server ownership, uniqueness for each liker/post pair, rate limits, and safe content handling. Upload images to protected object storage rather than keeping base64 in a whole-post browser record.
+
+## Notifications
+
+- The current bell reads `handdeck-player-notifications-v1` in this browser only. Online delivery needs server-owned notification records with stable IDs, recipient ID, actor ID, event type, target ID, creation time, and read time. The client must never choose another recipient or forge an actor in the server API.
+- Create notifications after successful Follow, Like, Comment, Match request/response, and Badge transactions. Do not notify for self-reactions or an unlike. Deduplicate event retries, enforce target visibility when opening a notification, and remove or redact references after a post or player is deleted.
+- `GET /api/notifications` returns only the authenticated recipient's items and unread count. Mark-read endpoints must verify that same recipient. Push or live updates can be added later; polling is enough for the first online beta.
 
 ## Match verification and permanent badges
 

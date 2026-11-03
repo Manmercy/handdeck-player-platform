@@ -32,7 +32,7 @@ document.getElementById('load-demo').addEventListener('click', async () => {
   const button=document.getElementById('load-demo'),status=document.getElementById('status');
   button.disabled=true;status.textContent='กำลังเตรียมข้อมูลทดสอบ…';
   try {
-    const response=await fetch('test-drive-data.json');
+    const response=await fetch('test-drive-data.json?v=20261103-1');
     if(!response.ok)throw Error('โหลดชุดทดสอบไม่สำเร็จ');
     const demo=await response.json();
     const keys=['handdeck-player-profiles-v2','handdeck-lorcana-saved-decks-v1','handdeck-player-posts-v1','handdeck-player-matches-v1'];
@@ -41,7 +41,13 @@ document.getElementById('load-demo').addEventListener('click', async () => {
       const additions=demo[key];
       if(!Array.isArray(existing)||!Array.isArray(additions))throw Error('ข้อมูลในเบราว์เซอร์ไม่ถูกต้อง');
       const merged=new Map(existing.map(item=>[item.id||item.postId,item]));
-      for(const item of additions)if(!merged.has(item.id||item.postId))merged.set(item.id||item.postId,item);
+      for(const item of additions){
+        const id=item.id||item.postId,old=merged.get(id);
+        if(!old){merged.set(id,item);continue;}
+        // Refresh only the deck link in older test-drive Matches. Preserve reactions and comments.
+        if(item.ownerId===old.ownerId&&key==='handdeck-player-matches-v1'&&!old.deckId)merged.set(id,{...old,deckId:item.deckId});
+        if(item.ownerId===old.ownerId&&key==='handdeck-player-posts-v1'&&item.type==='match'&&!old.match?.deckId)merged.set(id,{...old,match:{...old.match,deckId:item.match.deckId}});
+      }
       localStorage.setItem(key,JSON.stringify([...merged.values()]));
     }
     const first=demo['handdeck-player-profiles-v2'][0];
