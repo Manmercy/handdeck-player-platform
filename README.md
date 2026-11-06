@@ -13,6 +13,7 @@ Public static preview of the Hand Deck TCG player platform and Disney Lorcana De
 - Record a Match or post a Moment. Match posts can link one of your Lorcana decks and show a score graphic; linked Private decks remain hidden from other players. Follow another local player to see their posts, then like and comment.
 - Tag a local opponent in a Match. Their acceptance adds a Verified mark and reciprocal stats; a declined or unanswered Match counts only for the recorder. Earned badges remain after Match posts are removed.
 - Open the activity bell for local Follow, Like, Comment, Match response, and Badge notifications. The unread count and read state belong to each local profile.
+- A Match request notification opens the rival's verification card even when the rival does not follow the recorder. After verification, it opens the Match in the rival's profile history. Match History shows the linked deck when the viewer may access it, and opens the original post from the recorder's own history.
 - Download or share profile, deck, badge, and post Story graphics with the device share sheet.
 
 All profiles, decks, posts, and reactions are stored in that visitor's browser. **Public URL does not mean shared accounts:** players on different devices cannot find or follow each other yet. Google sign-in, cloud storage, cross-device Match verification, shop/event accounts, and direct Instagram publishing require a backend. The intended server contract is in [ONLINE_INTEGRATION.md](ONLINE_INTEGRATION.md).

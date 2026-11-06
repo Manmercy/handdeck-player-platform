@@ -57,3 +57,17 @@
 .match-deck-copy em{font-size:11px;font-style:normal;color:#dce6ff}
 .match-deck-private{margin:0 18px 18px;padding:13px;border:1px dashed #ffffff69;border-radius:12px;color:#e4e9ff;font-size:12px}
 @media(max-width:600px){.match-graphic{margin:0 14px 14px}.match-graphic-top{align-items:flex-start;padding:16px 15px 0}.match-graphic-top>span:first-child{font-size:8px;line-height:1.5}.match-graphic .match-verification{font-size:9px}.match-graphic-body{gap:5px;padding:21px 12px 18px}.match-graphic-player img,.match-player-placeholder{width:42px;height:42px;border-radius:12px}.match-graphic-player strong{font-size:10px}.match-graphic-player small{font-size:7px}.match-graphic-score{min-width:102px}.match-graphic-score>div{gap:5px}.match-graphic-score strong{font-size:35px}.match-graphic-score i{font-size:18px}.match-graphic-bottom{padding:0 15px 15px}.match-linked-deck{margin:0 14px 14px;width:calc(100% - 28px)}}
+.profile-history .profile-history-item{display:grid;grid-template-columns:62px minmax(0,1fr);align-items:center;padding:13px;gap:10px 12px;scroll-margin-top:110px}
+.profile-history-info{display:grid;gap:4px;min-width:180px;flex:1}
+.profile-history-info .match-verification{margin-top:2px}
+.profile-history-deck{display:inline-flex;align-items:center;gap:5px;width:max-content;max-width:100%;color:var(--purple);font-size:11px;font-weight:800;overflow-wrap:anywhere}
+.profile-history-deck .icon{width:15px;height:15px}
+.profile-history-actions{grid-column:1/-1;display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+.profile-history .profile-history-actions button{width:auto;min-height:40px;padding:8px 11px;justify-content:center;background:var(--panel);color:var(--purple);font-size:11px;font-weight:800;white-space:nowrap}
+.profile-history .profile-history-actions button:hover{border-color:var(--purple)}
+.match-request{scroll-margin-top:110px}
+.match-request .match-request-deck{display:inline-flex;align-items:center;gap:6px;width:max-content;max-width:100%;min-height:34px;margin-top:4px;padding:6px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--purple);font-size:11px;font-weight:800;text-align:left;white-space:normal}
+.match-request-deck .icon{width:15px;height:15px}
+.match-request .match-request-deck-private{font-size:11px}
+.notification-target{outline:3px solid var(--purple);outline-offset:4px;transition:outline-color .25s}
+@media(max-width:600px){.profile-history-actions{width:100%}.profile-history .profile-history-actions button{flex:1}}
